@@ -1,0 +1,37 @@
+role_id,skill,requirement_type,skill_group
+1,SQL,required,technical
+1,Database basics,required,technical
+1,KNIME,required,technical
+1,Data science fundamentals,required,technical
+1,Python,preferred,technical
+1,JavaScript,preferred,technical
+1,Data ingestion workflows,required,technical
+1,Reports and Data Apps,required,technical
+1,English,required,language
+2,Snowflake,preferred,technical
+2,dbt,preferred,technical
+2,Airflow,preferred,technical
+2,Machine learning model monitoring,required,technical
+2,Data mining,required,technical
+2,Exploratory data analysis,required,technical
+2,Predictive analytics,required,technical
+2,Data workflows and pipelines,required,technical
+2,English,required,language
+3,Power BI,required,technical
+3,SQL,required,technical
+3,Python,required,technical
+3,Excel,required,technical
+3,Tableau,preferred,technical
+3,Generative AI tools,required,technical
+3,Data analytics and reporting,required,technical
+3,Project management,required,professional
+3,English,required,language
+4,SQL,required,technical
+4,Python,required,technical
+4,Statistics,required,technical
+4,Machine learning,preferred,technical
+4,Data visualization,preferred,technical
+4,Modern AI technologies,preferred,technical
+4,Research and market analysis,required,professional
+4,Communication and workshops,required,professional
+4,English,required,language

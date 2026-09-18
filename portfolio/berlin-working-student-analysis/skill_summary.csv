@@ -1,0 +1,30 @@
+skill,roles_requesting_skill,pct_of_active_roles
+English,4,100.0
+Python,3,75.0
+SQL,3,75.0
+Airflow,1,25.0
+Communication and workshops,1,25.0
+Data analytics and reporting,1,25.0
+Data ingestion workflows,1,25.0
+Data mining,1,25.0
+Data science fundamentals,1,25.0
+Data visualization,1,25.0
+Data workflows and pipelines,1,25.0
+Database basics,1,25.0
+Excel,1,25.0
+Exploratory data analysis,1,25.0
+Generative AI tools,1,25.0
+JavaScript,1,25.0
+KNIME,1,25.0
+Machine learning,1,25.0
+Machine learning model monitoring,1,25.0
+Modern AI technologies,1,25.0
+Power BI,1,25.0
+Predictive analytics,1,25.0
+Project management,1,25.0
+Reports and Data Apps,1,25.0
+Research and market analysis,1,25.0
+Snowflake,1,25.0
+Statistics,1,25.0
+Tableau,1,25.0
+dbt,1,25.0
