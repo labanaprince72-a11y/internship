@@ -1,277 +1,290 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prince &amp; Kusum — Happy 1 Year</title>
-  <style>
-    :root {
-      --ink: #4b1729;
-      --muted: #8b5267;
-      --rose: #e85b78;
-      --rose-dark: #c73d5e;
-      --blush: #fff0f3;
-      --cream: #fffaf6;
-      --gold: #e0a451;
-      --line: rgba(156, 68, 96, .16);
-      --shadow: 0 24px 80px rgba(125, 35, 68, .18);
-    }
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Prince &amp; Kusum — Happy 1 Year</title>
+    <style>
+          :root {
+                  --ink: #4b1729;
+                  --muted: #8b5267;
+                  --rose: #e85b78;
+                  --rose-dark: #c73d5e;
+                  --blush: #fff0f3;
+                  --cream: #fffaf6;
+                  --gold: #e0a451;
+                  --line: rgba(156, 68, 96, .16);
+                  --shadow: 0 24px 80px rgba(125, 35, 68, .18);
+          }
 
-    * { box-sizing: border-box; }
-    html, body { min-height: 100%; }
-    body {
-      margin: 0;
-      color: var(--ink);
-      background:
-        radial-gradient(circle at 12% 16%, rgba(255, 214, 224, .9), transparent 26rem),
-        radial-gradient(circle at 88% 84%, rgba(248, 224, 185, .55), transparent 24rem),
-        linear-gradient(135deg, #fff9f5 0%, #fff0f4 52%, #ffe9ed 100%);
-      font-family: Georgia, "Times New Roman", serif;
-      overflow-x: hidden;
-    }
+          * { box-sizing: border-box; }
+          html, body { min-height: 100%; }
+          body {
+                  margin: 0;
+                  color: var(--ink);
+                  background:
+                            radial-gradient(circle at 12% 16%, rgba(255, 214, 224, .9), transparent 26rem),
+                            radial-gradient(circle at 88% 84%, rgba(248, 224, 185, .55), transparent 24rem),
+                            linear-gradient(135deg, #fff9f5 0%, #fff0f4 52%, #ffe9ed 100%);
+                  font-family: Georgia, "Times New Roman", serif;
+                  overflow-x: hidden;
+          }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      opacity: .34;
-      background-image: radial-gradient(rgba(129, 42, 71, .11) .7px, transparent .7px);
-      background-size: 16px 16px;
-      mask-image: linear-gradient(to bottom, black, transparent 82%);
-    }
+          body::before {
+                  content: "";
+                  position: fixed;
+                  inset: 0;
+                  pointer-events: none;
+                  opacity: .34;
+                  background-image: radial-gradient(rgba(129, 42, 71, .11) .7px, transparent .7px);
+                  background-size: 16px 16px;
+                  mask-image: linear-gradient(to bottom, black, transparent 82%);
+          }
 
-    .floating-hearts { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 0; }
-    .floating-hearts span {
-      position: absolute;
-      bottom: -8vh;
-      color: rgba(225, 76, 111, .22);
-      animation: floatUp linear infinite;
-      font-family: system-ui, sans-serif;
-      user-select: none;
-    }
-    .floating-hearts span:nth-child(1) { left: 8%; font-size: 24px; animation-duration: 13s; animation-delay: -3s; }
-    .floating-hearts span:nth-child(2) { left: 23%; font-size: 15px; animation-duration: 16s; animation-delay: -10s; }
-    .floating-hearts span:nth-child(3) { left: 44%; font-size: 33px; animation-duration: 19s; animation-delay: -7s; }
-    .floating-hearts span:nth-child(4) { left: 68%; font-size: 20px; animation-duration: 14s; animation-delay: -12s; }
-    .floating-hearts span:nth-child(5) { left: 87%; font-size: 29px; animation-duration: 18s; animation-delay: -5s; }
-    @keyframes floatUp { from { transform: translateY(0) rotate(0); opacity: 0; } 12% { opacity: 1; } to { transform: translateY(-115vh) rotate(28deg); opacity: 0; } }
+          .floating-hearts { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 0; }
+          .floating-hearts span {
+                  position: absolute;
+                  bottom: -8vh;
+                  color: rgba(225, 76, 111, .22);
+                  animation: floatUp linear infinite;
+                  font-family: system-ui, sans-serif;
+                  user-select: none;
+          }
+          .floating-hearts span:nth-child(1) { left: 8%; font-size: 24px; animation-duration: 13s; animation-delay: -3s; }
+          .floating-hearts span:nth-child(2) { left: 23%; font-size: 15px; animation-duration: 16s; animation-delay: -10s; }
+          .floating-hearts span:nth-child(3) { left: 44%; font-size: 33px; animation-duration: 19s; animation-delay: -7s; }
+          .floating-hearts span:nth-child(4) { left: 68%; font-size: 20px; animation-duration: 14s; animation-delay: -12s; }
+          .floating-hearts span:nth-child(5) { left: 87%; font-size: 29px; animation-duration: 18s; animation-delay: -5s; }
+          @keyframes floatUp { from { transform: translateY(0) rotate(0); opacity: 0; } 12% { opacity: 1; } to { transform: translateY(-115vh) rotate(28deg); opacity: 0; } }
 
-    .wrap { position: relative; z-index: 1; width: min(100% - 32px, 1040px); margin: 0 auto; padding: 28px 0 34px; }
-    .topline { display: flex; align-items: center; justify-content: space-between; gap: 18px; color: var(--muted); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; }
-    .topline .mark { display: inline-flex; align-items: center; gap: 8px; font-weight: bold; color: var(--rose-dark); }
-    .mark-heart { font-size: 20px; letter-spacing: 0; }
-    .date { white-space: nowrap; }
+          .wrap { position: relative; z-index: 1; width: min(100% - 32px, 1040px); margin: 0 auto; padding: 28px 0 34px; }
+          .topline { display: flex; align-items: center; justify-content: space-between; gap: 18px; color: var(--muted); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; }
+          .topline .mark { display: inline-flex; align-items: center; gap: 8px; font-weight: bold; color: var(--rose-dark); }
+          .mark-heart { font-size: 20px; letter-spacing: 0; }
+          .date { white-space: nowrap; }
 
-    .shell { position: relative; margin-top: 22px; min-height: min(740px, calc(100vh - 100px)); display: grid; place-items: center; padding: 22px; border: 1px solid rgba(255,255,255,.8); border-radius: 30px; background: rgba(255, 250, 246, .72); box-shadow: var(--shadow); overflow: hidden; }
-    .shell::after { content: ""; position: absolute; width: 440px; height: 440px; right: -180px; top: -205px; border: 1px solid rgba(232,91,120,.13); border-radius: 50%; box-shadow: 0 0 0 24px rgba(232,91,120,.035), 0 0 0 48px rgba(232,91,120,.028); pointer-events: none; }
+          .shell { position: relative; margin-top: 22px; min-height: min(740px, calc(100vh - 100px)); display: grid; place-items: center; padding: 22px; border: 1px solid rgba(255,255,255,.8); border-radius: 30px; background: rgba(255, 250, 246, .72); box-shadow: var(--shadow); overflow: hidden; }
+          .shell::after { content: ""; position: absolute; width: 440px; height: 440px; right: -180px; top: -205px; border: 1px solid rgba(232,91,120,.13); border-radius: 50%; box-shadow: 0 0 0 24px rgba(232,91,120,.035), 0 0 0 48px rgba(232,91,120,.028); pointer-events: none; }
 
-    .screen { width: min(100%, 740px); text-align: center; animation: enter .7s ease both; }
-    @keyframes enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-    .eyebrow { color: var(--rose-dark); font-size: 12px; letter-spacing: .28em; text-transform: uppercase; font-weight: bold; }
-    h1, h2, p { margin-top: 0; }
-    h1 { margin-bottom: 16px; font-size: clamp(42px, 8vw, 82px); line-height: .94; letter-spacing: -.055em; font-weight: 500; }
-    h2 { margin-bottom: 14px; font-size: clamp(38px, 7vw, 68px); line-height: .98; letter-spacing: -.045em; font-weight: 500; }
-    .script { color: var(--rose-dark); font-style: italic; }
-    .lede { max-width: 560px; margin: 0 auto 28px; color: var(--muted); font-size: 18px; line-height: 1.6; }
-    .tiny { color: var(--muted); font-size: 12px; line-height: 1.55; }
+          .screen { width: min(100%, 740px); text-align: center; animation: enter .7s ease both; }
+          @keyframes enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+          .eyebrow { color: var(--rose-dark); font-size: 12px; letter-spacing: .28em; text-transform: uppercase; font-weight: bold; }
+          h1, h2, p { margin-top: 0; }
+          h1 { margin-bottom: 16px; font-size: clamp(42px, 8vw, 82px); line-height: .94; letter-spacing: -.055em; font-weight: 500; }
+          h2 { margin-bottom: 14px; font-size: clamp(38px, 7vw, 68px); line-height: .98; letter-spacing: -.045em; font-weight: 500; }
+          .script { color: var(--rose-dark); font-style: italic; }
+          .lede { max-width: 560px; margin: 0 auto 28px; color: var(--muted); font-size: 18px; line-height: 1.6; }
+          .tiny { color: var(--muted); font-size: 12px; line-height: 1.55; }
 
-    .heart-seal { display: grid; place-items: center; width: 96px; height: 96px; margin: 0 auto 24px; border-radius: 50%; background: rgba(255,255,255,.75); border: 1px solid var(--line); box-shadow: 0 14px 32px rgba(164, 51, 83, .12); color: var(--rose); font-size: 44px; animation: heartbeat 2.4s ease-in-out infinite; }
-    @keyframes heartbeat { 0%,100% { transform: scale(1); } 10% { transform: scale(1.08); } 18% { transform: scale(1); } 27% { transform: scale(1.05); } 36% { transform: scale(1); } }
+          .heart-seal { display: grid; place-items: center; width: 96px; height: 96px; margin: 0 auto 24px; border-radius: 50%; background: rgba(255,255,255,.75); border: 1px solid var(--line); box-shadow: 0 14px 32px rgba(164, 51, 83, .12); color: var(--rose); font-size: 44px; animation: heartbeat 2.4s ease-in-out infinite; }
+          @keyframes heartbeat { 0%,100% { transform: scale(1); } 10% { transform: scale(1.08); } 18% { transform: scale(1); } 27% { transform: scale(1.05); } 36% { transform: scale(1); } }
 
-    .form { width: min(100%, 480px); margin: 0 auto; text-align: left; }
-    label { display: block; margin: 0 0 8px 4px; color: var(--muted); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
-    input, textarea { width: 100%; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.72); padding: 15px 16px; color: var(--ink); font: inherit; outline: none; transition: border-color .2s, box-shadow .2s, transform .2s; }
-    input:focus, textarea:focus { border-color: rgba(199,61,94,.6); box-shadow: 0 0 0 4px rgba(232,91,120,.11); transform: translateY(-1px); }
-    textarea { min-height: 88px; resize: vertical; }
-    .field + .field { margin-top: 16px; }
-    .button-row { display: flex; justify-content: center; gap: 12px; margin-top: 22px; }
-    button { border: 0; border-radius: 999px; padding: 14px 23px; font: inherit; font-size: 16px; cursor: pointer; transition: transform .2s, box-shadow .2s, background .2s; }
-    button:focus-visible { outline: 3px solid rgba(224,164,81,.6); outline-offset: 4px; }
-    .primary { color: white; background: linear-gradient(135deg, var(--rose), var(--rose-dark)); box-shadow: 0 12px 24px rgba(199,61,94,.23); }
-    .primary:hover { transform: translateY(-2px); box-shadow: 0 16px 30px rgba(199,61,94,.28); }
-    .ghost { color: var(--rose-dark); background: rgba(255,255,255,.7); border: 1px solid var(--line); }
-    .ghost:hover { transform: translateY(-2px); background: white; }
+          .form { width: min(100%, 480px); margin: 0 auto; text-align: left; }
+          label { display: block; margin: 0 0 8px 4px; color: var(--muted); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+          input, textarea { width: 100%; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.72); padding: 15px 16px; color: var(--ink); font: inherit; outline: none; transition: border-color .2s, box-shadow .2s, transform .2s; }
+          input:focus, textarea:focus { border-color: rgba(199,61,94,.6); box-shadow: 0 0 0 4px rgba(232,91,120,.11); transform: translateY(-1px); }
+          textarea { min-height: 88px; resize: vertical; }
+          .field + .field { margin-top: 16px; }
+          .button-row { display: flex; justify-content: center; gap: 12px; margin-top: 22px; }
+          button { border: 0; border-radius: 999px; padding: 14px 23px; font: inherit; font-size: 16px; cursor: pointer; transition: transform .2s, box-shadow .2s, background .2s; }
+          button:focus-visible { outline: 3px solid rgba(224,164,81,.6); outline-offset: 4px; }
+          .primary { color: white; background: linear-gradient(135deg, var(--rose), var(--rose-dark)); box-shadow: 0 12px 24px rgba(199,61,94,.23); }
+          .primary:hover { transform: translateY(-2px); box-shadow: 0 16px 30px rgba(199,61,94,.28); }
+          .ghost { color: var(--rose-dark); background: rgba(255,255,255,.7); border: 1px solid var(--line); }
+          .ghost:hover { transform: translateY(-2px); background: white; }
 
-    .proposal { position: relative; min-height: 420px; display: grid; place-items: center; }
-    .proposal .note { max-width: 560px; margin: 0 auto 24px; padding: 14px 20px; color: var(--muted); font-style: italic; line-height: 1.6; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .choice-zone { position: relative; width: min(100%, 520px); height: 120px; margin: 18px auto 0; }
-    .choice-zone button { position: absolute; top: 28px; }
-    #yesBtn { left: calc(50% - 116px); min-width: 104px; }
-    #noBtn { left: calc(50% + 14px); min-width: 104px; color: var(--muted); background: rgba(255,255,255,.72); border: 1px solid var(--line); }
-    .tease { min-height: 20px; margin: 4px 0 0; color: var(--rose-dark); font-size: 13px; font-style: italic; }
+          .proposal { position: relative; min-height: 420px; display: grid; place-items: center; }
+          .proposal .note { max-width: 560px; margin: 0 auto 24px; padding: 14px 20px; color: var(--muted); font-style: italic; line-height: 1.6; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+          .choice-zone { position: relative; width: min(100%, 520px); height: 120px; margin: 18px auto 0; }
+          .choice-zone button { position: absolute; top: 28px; }
+          #yesBtn { left: calc(50% - 116px); min-width: 104px; }
+          #noBtn { left: calc(50% + 14px); min-width: 104px; color: var(--muted); background: rgba(255,255,255,.72); border: 1px solid var(--line); }
+          .tease { min-height: 20px; margin: 4px 0 0; color: var(--rose-dark); font-size: 13px; font-style: italic; }
 
-    .success { position: relative; overflow: hidden; }
-    .success .big-heart { font-family: system-ui, sans-serif; font-size: 88px; line-height: 1; color: var(--rose); filter: drop-shadow(0 10px 12px rgba(199,61,94,.18)); animation: pop .8s cubic-bezier(.2,.8,.2,1) both; }
-    @keyframes pop { from { opacity: 0; transform: scale(.35) rotate(-15deg); } to { opacity: 1; transform: scale(1) rotate(0); } }
-    .promise { width: min(100%, 620px); margin: 18px auto 0; color: var(--muted); line-height: 1.75; font-size: 17px; }
-    .signature { margin-top: 24px; color: var(--rose-dark); font-size: 22px; font-style: italic; }
-    .confetti { position: fixed; inset: 0; pointer-events: none; z-index: 5; overflow: hidden; }
-    .confetti i { position: absolute; top: -12px; width: 9px; height: 16px; background: var(--rose); animation: fall 3.2s linear forwards; }
-    .confetti i:nth-child(3n) { background: var(--gold); }
-    .confetti i:nth-child(4n) { background: #dca9bc; }
-    @keyframes fall { to { transform: translateY(110vh) rotate(720deg); opacity: .1; } }
-    .hidden { display: none !important; }
+          .success { position: relative; overflow: hidden; }
+          .success .big-heart { font-family: system-ui, sans-serif; font-size: 88px; line-height: 1; color: var(--rose); filter: drop-shadow(0 10px 12px rgba(199,61,94,.18)); animation: pop .8s cubic-bezier(.2,.8,.2,1) both; }
+          @keyframes pop { from { opacity: 0; transform: scale(.35) rotate(-15deg); } to { opacity: 1; transform: scale(1) rotate(0); } }
+          .promise { width: min(100%, 620px); margin: 18px auto 0; color: var(--muted); line-height: 1.75; font-size: 17px; }
+          .signature { margin-top: 24px; color: var(--rose-dark); font-size: 22px; font-style: italic; }
+          .confetti { position: fixed; inset: 0; pointer-events: none; z-index: 5; overflow: hidden; }
+          .confetti i { position: absolute; top: -12px; width: 9px; height: 16px; background: var(--rose); animation: fall 3.2s linear forwards; }
+          .confetti i:nth-child(3n) { background: var(--gold); }
+          .confetti i:nth-child(4n) { background: #dca9bc; }
+          @keyframes fall { to { transform: translateY(110vh) rotate(720deg); opacity: .1; } }
+          .hidden { display: none !important; }
 
-    .memories { width: min(100%, 650px); margin: 30px auto 8px; padding-top: 24px; border-top: 1px solid var(--line); }
-    .memories-heading { margin: 0 0 14px; color: var(--rose-dark); font-size: 20px; font-style: italic; font-weight: 500; }
-    .memory-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 9px; }
-    .memory-grid figure { position: relative; margin: 0; aspect-ratio: 1 / 1.18; overflow: hidden; border-radius: 14px; background: #f6dfe4; box-shadow: 0 8px 18px rgba(125,35,68,.10); }
-    .memory-grid img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .45s ease; }
-    .memory-grid figure:hover img { transform: scale(1.06); }
-    .memory-grid figure:nth-child(2) img { object-position: 50% 38%; }
-    .memory-grid figure:nth-child(3) img { object-position: 50% 48%; }
-    .memory-grid figure:nth-child(4) img { object-position: 50% 56%; }
-    .video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 12px; }
-    .memory-video { margin: 0; overflow: hidden; border-radius: 16px; background: rgba(255,255,255,.65); border: 1px solid var(--line); box-shadow: 0 8px 18px rgba(125,35,68,.08); }
-    .memory-video video { width: 100%; aspect-ratio: 16 / 10; display: block; object-fit: cover; background: #301522; }
-    .memory-video figcaption { padding: 10px 14px 12px; color: var(--muted); font-size: 13px; font-style: italic; text-align: center; }
-    @media (max-width: 560px) { .video-grid { grid-template-columns: 1fr; gap: 8px; } }
-    footer { margin-top: 18px; text-align: center; color: rgba(139,82,103,.75); font-size: 12px; }
-    @media (max-width: 560px) {
-      .memory-grid { gap: 6px; }
-      .memory-grid figure { border-radius: 10px; }
-      .memory-video video { max-height: 220px; }
-    }
-    @media (max-width: 560px) {
-      .wrap { width: min(100% - 18px, 1040px); padding-top: 16px; }
-      .topline { font-size: 10px; letter-spacing: .12em; }
-      .shell { margin-top: 14px; min-height: calc(100vh - 80px); padding: 22px 15px; border-radius: 24px; }
-      .lede { font-size: 16px; }
-      .choice-zone { height: 146px; }
-      #yesBtn { left: calc(50% - 112px); }
-      #noBtn { left: calc(50% + 7px); }
-    }
-  </style>
-</head>
-<body>
-  <div class="floating-hearts" aria-hidden="true"><span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span></div>
-  <div class="wrap">
-    <div class="topline"><div class="mark"><span class="mark-heart">♥</span> Prince &amp; Kusum</div><div class="date">Happy 1 year</div></div>
-    <main class="shell" aria-live="polite">
-      <section id="welcome" class="screen">
-        <div class="heart-seal" aria-hidden="true">♥</div>
-        <div class="eyebrow">For the person who feels like home</div>
-        <h1>Happy <span class="script">1 year, Kusum.</span></h1>
-        <p class="lede">One beautiful year with you, and somehow my heart still finds new ways to choose you every day.</p>
-        <div class="memories">
-          <h3 class="memories-heading">A few pieces of our little world</h3>
-          <div class="memory-grid" aria-label="Photos of Prince and Kusum">
-            <figure><img src="anniversary-memory-1.jpg" alt="Prince and Kusum smiling together" /></figure>
-            <figure><img src="anniversary-memory-2.jpg" alt="Prince and Kusum sharing a quiet moment" /></figure>
-            <figure><img src="anniversary-memory-3.jpg" alt="Prince and Kusum together at dinner" /></figure>
-            <figure><img src="anniversary-memory-4.jpg" alt="Prince and Kusum enjoying an evening together" /></figure>
-            <figure><img src="anniversary-memory-5.jpg" alt="Another memory of Prince and Kusum together" /></figure>
-            <figure><img src="anniversary-memory-6.jpg" alt="Prince and Kusum sharing another special moment" /></figure>
-          </div>
-          <div class="video-grid" aria-label="Videos of Prince and Kusum">
-            <figure class="memory-video"><video controls playsinline preload="metadata" poster="anniversary-memory-3.jpg"><source src="anniversary-video-1.mp4" type="video/mp4" /></video><figcaption>One little memory</figcaption></figure>
-            <figure class="memory-video"><video controls playsinline preload="metadata" poster="anniversary-memory-5.jpg"><source src="anniversary-video-2.mp4" type="video/mp4" /></video><figcaption>Another little memory</figcaption></figure>
-            <figure class="memory-video"><video controls playsinline preload="metadata" poster="anniversary-memory-6.jpg"><source src="anniversary-video-3.mp4" type="video/mp4" /></video><figcaption>A moment I’ll always keep</figcaption></figure>
-            <figure class="memory-video"><video controls playsinline preload="metadata" poster="anniversary-memory-4.jpg"><source src="anniversary-video-4.mp4" type="video/mp4" /></video><figcaption>Us, in another frame</figcaption></figure>
-          </div>
-        </div>
-        <div class="button-row"><button class="primary" id="openBtn">There is one question for you <span aria-hidden="true">→</span></button></div>
-        <p class="tiny" style="margin-top:18px">Made with too much love, a little courage, and one very important question.</p>
-      </section>
+          .memories { width: min(100%, 650px); margin: 30px auto 8px; padding-top: 24px; border-top: 1px solid var(--line); }
+          .memories-heading { margin: 0 0 14px; color: var(--rose-dark); font-size: 20px; font-style: italic; font-weight: 500; }
+          .story-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 18px; }
+          .story-card { margin: 0; overflow: hidden; border-radius: 16px; background: rgba(255,255,255,.65); border: 1px solid var(--line); box-shadow: 0 8px 18px rgba(125,35,68,.08); }
+          .story-card img, .story-card video { width: 100%; aspect-ratio: 1 / 1.08; display: block; object-fit: cover; background: #301522; }
+          .story-card img { transition: transform .45s ease; }
+          .story-card:hover img { transform: scale(1.05); }
+          .story-card:nth-child(2) img { object-position: 50% 38%; }
+          .story-card:nth-child(3) img { object-position: 50% 48%; }
+          .story-card:nth-child(5) img { object-position: 50% 56%; }
+          .story-card figcaption { padding: 10px 12px 12px; color: var(--muted); font-size: 13px; font-style: italic; text-align: center; }
+          .music-card { margin: 18px auto 0; padding: 16px; border-radius: 18px; background: rgba(255,255,255,.62); border: 1px solid var(--line); box-shadow: 0 8px 18px rgba(125,35,68,.08); }
+          .music-card .music-label { color: var(--rose-dark); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: bold; }
+          .music-card h4 { margin: 7px 0 4px; color: var(--ink); font-size: 20px; font-weight: 500; }
+          .music-card p { margin: 0 0 12px; color: var(--muted); font-size: 13px; }
+          .music-card iframe { width: 100%; height: 86px; display: block; border: 0; border-radius: 12px; }
+          footer { margin-top: 18px; text-align: center; color: rgba(139,82,103,.75); font-size: 12px; }
+          @media (max-width: 560px) {
+                  .story-grid { grid-template-columns: 1fr; gap: 10px; }
+                  .story-card img, .story-card video { aspect-ratio: 16 / 11; }
+                  .music-card { padding: 12px; }
+                  .music-card iframe { height: 84px; }
+          }
+          @media (max-width: 560px) {
+                  .wrap { width: min(100% - 18px, 1040px); padding-top: 16px; }
+                  .topline { font-size: 10px; letter-spacing: .12em; }
+                  .shell { margin-top: 14px; min-height: calc(100vh - 80px); padding: 22px 15px; border-radius: 24px; }
+                  .lede { font-size: 16px; }
+                  .choice-zone { height: 146px; }
+                  #yesBtn { left: calc(50% - 112px); }
+                  #noBtn { left: calc(50% + 7px); }
+          }
+        </style>
+  </head>
+  <body>
+      <div class="floating-hearts" aria-hidden="true"><span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span></div>div>
+    <div class="wrap">
+        <div class="topline"><div class="mark"><span class="mark-heart">♥</span> Prince &amp; Kusum</div>div><div class="date">Happy 1 year</div>div></div>div>
+        <main class="shell" aria-live="polite">
+              <section id="welcome" class="screen">
+                      <div class="heart-seal" aria-hidden="true">♥</div>div>
+                      <div class="eyebrow">For the person who feels like home</div>div>
+                      <h1>Happy <span class="script">1 year, Kusum.</span>span></h1>
+                      <p class="lede">One beautiful year with you, and somehow my heart still finds new ways to choose you every day.</p>p>
+                      <div class="memories">
+                                <h3 class="memories-heading">Here is the short life of us</h3>
+                                <div class="story-grid" aria-label="A short life of Prince and Kusum">
+                                            <figure class="story-card"><img src="anniversary-memory-1.jpg" alt="Prince and Kusum smiling together" /><figcaption>Where our story feels like home</figcaption></figure>figure>
+                                            <figure class="story-card"><video controls playsinline preload="metadata" poster="anniversary-memory-3.jpg"><source src="anniversary-video-1.mp4" type="video/mp4" /></video>video><figcaption>Little moments, big feelings</figcaption></figure>figure>
+                                            <figure class="story-card"><img src="anniversary-memory-2.jpg" alt="Prince and Kusum sharing a quiet moment" /><figcaption>The kind of quiet I love</figcaption></figure>figure>
+                                            <figure class="story-card"><video controls playsinline preload="metadata" poster="anniversary-memory-5.jpg"><source src="anniversary-video-2.mp4" type="video/mp4" /></video>video><figcaption>Laughing our way through life</figcaption></figure>figure>
+                                            <figure class="story-card"><img src="anniversary-memory-3.jpg" alt="Prince and Kusum together at dinner" /><figcaption>Us, in every kind of light</figcaption></figure>figure>
+                                            <figure class="story-card"><video controls playsinline preload="metadata" poster="anniversary-memory-6.jpg"><source src="anniversary-video-3.mp4" type="video/mp4" /></video>video><figcaption>One memory I’ll always keep</figcaption></figure>figure>
+                                            <figure class="story-card"><img src="anniversary-memory-4.jpg" alt="Prince and Kusum enjoying an evening together" /><figcaption>My favorite place is beside you</figcaption></figure>figure>
+                                            <figure class="story-card"><video controls playsinline preload="metadata" poster="anniversary-memory-4.jpg"><source src="anniversary-video-4.mp4" type="video/mp4" /></video>video><figcaption>And there is still so much ahead</figcaption></figure>figure>
+                                            <figure class="story-card"><img src="anniversary-memory-5.jpg" alt="Another memory of Prince and Kusum together" /><figcaption>Our ordinary moments are extraordinary</figcaption></figure>figure>
+                                            <figure class="story-card"><img src="anniversary-memory-6.jpg" alt="Prince and Kusum sharing another special moment" /><figcaption>One year, a thousand little memories</figcaption></figure>figure>
+                                </div>div>
+                                <div class="music-card">
+                                            <div class="music-label">Our song</div>div>
+                                            <h4>Count on Me</h4>
+                                            <p>Tap play and let this little story play with us.</p>
+                                            <iframe title="Count on Me by Bruno Mars" src="https://www.youtube-nocookie.com/embed/6k8cpUkKK4c?rel=0&playsinline=1&autoplay=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>iframe>
+                                </div>div>
+                      </div>div>
+                      <div class="button-row"><button class="primary" id="openBtn">There is one question for you <span aria-hidden="true">→</span></button>button></div>div>
+                      <p class="tiny" style="margin-top:18px">Made with too much love, a little courage, and one very important question.</p>
+              </section>section>
+        
+              <section id="proposal" class="screen proposal hidden">
+                      <div>
+                                  <div class="eyebrow">A question I have carried for a while</div>
+                                  <h2><span id="nameDisplay">Kusum</span>span>,<br /><span class="script">will you marry me?</span>span></h2>
+                                  <p class="note" id="noteDisplay">One year with you has been my favorite chapter, and I want every chapter after this to be ours.</p>p>
+                                  <div class="choice-zone" id="choiceZone">
+                                                <button class="primary" id="yesBtn">Yes, always ♥</button>button>
+                                                <button class="ghost" id="noBtn">No</button>button>
+                                  </div>
+                                  <p class="tease" id="tease" aria-live="polite"></p>p>
+                                  <p class="tiny" style="margin-top:14px">Choose carefully… the “No” button is feeling a little shy tonight.</p>p>
+                      </div>
+              </section>section>
 
-      <section id="proposal" class="screen proposal hidden">
-        <div>
-          <div class="eyebrow">A question I have carried for a while</div>
-          <h2><span id="nameDisplay">Kusum</span>,<br /><span class="script">will you marry me?</span></h2>
-          <p class="note" id="noteDisplay">One year with you has been my favorite chapter, and I want every chapter after this to be ours.</p>
-          <div class="choice-zone" id="choiceZone">
-            <button class="primary" id="yesBtn">Yes, always ♥</button>
-            <button class="ghost" id="noBtn">No</button>
-          </div>
-          <p class="tease" id="tease" aria-live="polite"></p>
-          <p class="tiny" style="margin-top:14px">Choose carefully… the “No” button is feeling a little shy tonight.</p>
-        </div>
-      </section>
+                <section id="success" class="screen success hidden">
+                          <div class="big-heart" aria-hidden="true">♥</div>
+                          <div class="eyebrow" style="margin-top:16px">The easiest yes in the world</div>
+                          <h2><span class="script">I knew it!</span>span></h2>
+                          <p class="promise">Then it’s you and me—more ordinary mornings, spontaneous adventures, ridiculous inside jokes, and a lifetime of choosing each other.</p>
+                          <p class="signature">Happy first anniversary, <span id="successName">Kusum</span>.<br />Here’s to every anniversary still to come.<br /><span style="font-size:16px">With all my love, Prince.</span></p>
+                          <div class="button-row"><button class="ghost" id="replayBtn">Replay our little story ↺</button>button></div>
+                </section>section>
+        </main>main>
+          <footer>No pressure, only love. This little surprise is yours to keep.</footer>
+    </div>
+  
+    <script>
+          const welcome = document.getElementById('welcome');
+          const proposal = document.getElementById('proposal');
+          const success = document.getElementById('success');
+          const nameDisplay = document.getElementById('nameDisplay');
+          const successName = document.getElementById('successName');
+          const noteDisplay = document.getElementById('noteDisplay');
+          const choiceZone = document.getElementById('choiceZone');
+          const noBtn = document.getElementById('noBtn');
+          const yesBtn = document.getElementById('yesBtn');
+          const tease = document.getElementById('tease');
+          let noAttempts = 0;
 
-      <section id="success" class="screen success hidden">
-        <div class="big-heart" aria-hidden="true">♥</div>
-        <div class="eyebrow" style="margin-top:16px">The easiest yes in the world</div>
-        <h2><span class="script">I knew it!</span></h2>
-        <p class="promise">Then it’s you and me—more ordinary mornings, spontaneous adventures, ridiculous inside jokes, and a lifetime of choosing each other.</p>
-        <p class="signature">Happy first anniversary, <span id="successName">Kusum</span>.<br />Here’s to every anniversary still to come.<br /><span style="font-size:16px">With all my love, Prince.</span></p>
-        <div class="button-row"><button class="ghost" id="replayBtn">Replay our little story ↺</button></div>
-      </section>
-    </main>
-    <footer>No pressure, only love. This little surprise is yours to keep.</footer>
-  </div>
+          function show(section) {
+                  [welcome, proposal, success].forEach(s => s.classList.add('hidden'));
+                  section.classList.remove('hidden');
+                  section.style.animation = 'none';
+                  requestAnimationFrame(() => section.style.animation = '');
+          }
 
-  <script>
-    const welcome = document.getElementById('welcome');
-    const proposal = document.getElementById('proposal');
-    const success = document.getElementById('success');
-    const nameDisplay = document.getElementById('nameDisplay');
-    const successName = document.getElementById('successName');
-    const noteDisplay = document.getElementById('noteDisplay');
-    const choiceZone = document.getElementById('choiceZone');
-    const noBtn = document.getElementById('noBtn');
-    const yesBtn = document.getElementById('yesBtn');
-    const tease = document.getElementById('tease');
-    let noAttempts = 0;
+          document.getElementById('openBtn').addEventListener('click', () => {
+                  nameDisplay.textContent = 'Kusum';
+                  successName.textContent = 'Kusum';
+                  noteDisplay.textContent = 'One year with you has been my favorite chapter, and I want every chapter after this to be ours.';
+                  show(proposal);
+          });
 
-    function show(section) {
-      [welcome, proposal, success].forEach(s => s.classList.add('hidden'));
-      section.classList.remove('hidden');
-      section.style.animation = 'none';
-      requestAnimationFrame(() => section.style.animation = '');
-    }
+          function moveNo() {
+                  noAttempts++;
+                  const maxX = Math.max(12, choiceZone.clientWidth - noBtn.offsetWidth - 12);
+                  const maxY = Math.max(8, choiceZone.clientHeight - noBtn.offsetHeight - 8);
+                  const x = Math.floor(8 + Math.random() * (maxX - 8));
+                  const y = Math.floor(5 + Math.random() * (maxY - 5));
+                  noBtn.style.left = x + 'px';
+                  noBtn.style.top = y + 'px';
+                  const messages = [
+                            'That button seems to have other plans…',
+                            'Almost! But my heart is voting for “Yes.”',
+                            'It’s running away because it knows the answer.',
+                            'I’ll keep asking with puppy eyes.',
+                            'Okay, okay… one more chance to say yes?'
+                          ];
+                  tease.textContent = messages[Math.min(noAttempts - 1, messages.length - 1)];
+          }
+          noBtn.addEventListener('mouseenter', moveNo);
+          noBtn.addEventListener('touchstart', (event) => { event.preventDefault(); moveNo(); }, { passive: false });
+          noBtn.addEventListener('click', (event) => { event.preventDefault(); moveNo(); });
 
-    document.getElementById('openBtn').addEventListener('click', () => {
-      nameDisplay.textContent = 'Kusum';
-      successName.textContent = 'Kusum';
-      noteDisplay.textContent = 'One year with you has been my favorite chapter, and I want every chapter after this to be ours.';
-      show(proposal);
-    });
+          yesBtn.addEventListener('click', () => {
+                  show(success);
+                  document.querySelector('.shell').style.background = 'rgba(255, 248, 244, .88)';
+                  const confetti = document.createElement('div');
+                  confetti.className = 'confetti';
+                  for (let i = 0; i < 72; i++) {
+                            const bit = document.createElement('i');
+                            bit.style.left = Math.random() * 100 + '%';
+                            bit.style.animationDelay = Math.random() * .8 + 's';
+                            bit.style.animationDuration = (2.6 + Math.random() * 2.1) + 's';
+                            bit.style.transform = 'rotate(' + Math.random() * 360 + 'deg)';
+                            confetti.appendChild(bit);
+                  }
+                  document.body.appendChild(confetti);
+                  setTimeout(() => confetti.remove(), 5500);
+          });
 
-    function moveNo() {
-      noAttempts++;
-      const maxX = Math.max(12, choiceZone.clientWidth - noBtn.offsetWidth - 12);
-      const maxY = Math.max(8, choiceZone.clientHeight - noBtn.offsetHeight - 8);
-      const x = Math.floor(8 + Math.random() * (maxX - 8));
-      const y = Math.floor(5 + Math.random() * (maxY - 5));
-      noBtn.style.left = x + 'px';
-      noBtn.style.top = y + 'px';
-      const messages = [
-        'That button seems to have other plans…',
-        'Almost! But my heart is voting for “Yes.”',
-        'It’s running away because it knows the answer.',
-        'I’ll keep asking with puppy eyes.',
-        'Okay, okay… one more chance to say yes?'
-      ];
-      tease.textContent = messages[Math.min(noAttempts - 1, messages.length - 1)];
-    }
-    noBtn.addEventListener('mouseenter', moveNo);
-    noBtn.addEventListener('touchstart', (event) => { event.preventDefault(); moveNo(); }, { passive: false });
-    noBtn.addEventListener('click', (event) => { event.preventDefault(); moveNo(); });
+          document.getElementById('replayBtn').addEventListener('click', () => {
+                  noAttempts = 0;
+                  noBtn.removeAttribute('style');
+                  tease.textContent = '';
+                  show(welcome);
+          });
+    </script>
+  </body>
+</html>html>
 
-    yesBtn.addEventListener('click', () => {
-      show(success);
-      document.querySelector('.shell').style.background = 'rgba(255, 248, 244, .88)';
-      const confetti = document.createElement('div');
-      confetti.className = 'confetti';
-      for (let i = 0; i < 72; i++) {
-        const bit = document.createElement('i');
-        bit.style.left = Math.random() * 100 + '%';
-        bit.style.animationDelay = Math.random() * .8 + 's';
-        bit.style.animationDuration = (2.6 + Math.random() * 2.1) + 's';
-        bit.style.transform = 'rotate(' + Math.random() * 360 + 'deg)';
-        confetti.appendChild(bit);
-      }
-      document.body.appendChild(confetti);
-      setTimeout(() => confetti.remove(), 5500);
-    });
-
-    document.getElementById('replayBtn').addEventListener('click', () => {
-      noAttempts = 0;
-      noBtn.removeAttribute('style');
-      tease.textContent = '';
-      show(welcome);
-    });
-  </script>
-</body>
-</html>
+    </script></footer>
+                      </div></p></figcaption></figcaption></h1></span></span>
+  </body>
+    </style></title>
+  </head>
