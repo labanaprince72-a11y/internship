@@ -131,6 +131,8 @@
     .music-card iframe { width: 100%; height: 86px; display: block; border: 0; border-radius: 12px; }
     .after-video { width: min(100%, 520px); margin: 24px auto 4px; }
     .after-video video { width: 100%; aspect-ratio: 16 / 10; display: block; object-fit: cover; background: #301522; border-radius: 16px; }
+    .extra { min-height: 420px; display: grid; place-items: center; }
+    .extra-reveal { width: min(100%, 560px); margin: 22px auto 0; padding: 18px 22px; color: var(--rose-dark); font-size: 21px; font-style: italic; line-height: 1.55; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.58); box-shadow: 0 10px 24px rgba(125,35,68,.08); }
     footer { margin-top: 18px; text-align: center; color: rgba(139,82,103,.75); font-size: 12px; }
     @media (max-width: 560px) {
       .story-grid { grid-template-columns: 1fr; gap: 10px; }
@@ -210,7 +212,19 @@
           </video>
           <figcaption>And this little video is waiting for you after your yes ♥</figcaption>
         </figure>
-        <div class="button-row"><button class="ghost" id="replayBtn">Replay our little story ↺</button></div>
+        <div class="button-row"><button class="primary" id="extraBtn">One more thing… <span aria-hidden="true">→</span></button></div>
+      </section>
+
+      <section id="extra" class="screen extra hidden">
+        <div>
+          <div class="heart-seal" aria-hidden="true">♥</div>
+          <div class="eyebrow">Because one surprise is never enough</div>
+          <h2><span class="script">Do you want to see something else?</span></h2>
+          <p class="lede">I saved one more little feeling here just for you.</p>
+          <div class="button-row"><button class="primary" id="showMoreBtn">Yes, show me ♥</button></div>
+          <p id="extraReveal" class="extra-reveal hidden">The something else is… I love you more than yesterday, and less than tomorrow.</p>
+          <div class="button-row"><button class="ghost" id="replayBtn">Replay our little story ↺</button></div>
+        </div>
       </section>
     </main>
     <footer>No pressure, only love. This little surprise is yours to keep.</footer>
@@ -220,6 +234,8 @@
     const welcome = document.getElementById('welcome');
     const proposal = document.getElementById('proposal');
     const success = document.getElementById('success');
+    const extra = document.getElementById('extra');
+    const extraReveal = document.getElementById('extraReveal');
     const nameDisplay = document.getElementById('nameDisplay');
     const successName = document.getElementById('successName');
     const noteDisplay = document.getElementById('noteDisplay');
@@ -230,7 +246,7 @@
     let noAttempts = 0;
 
     function show(section) {
-      [welcome, proposal, success].forEach(s => s.classList.add('hidden'));
+      [welcome, proposal, success, extra].forEach(s => s.classList.add('hidden'));
       section.classList.remove('hidden');
       section.style.animation = 'none';
       requestAnimationFrame(() => section.style.animation = '');
@@ -281,10 +297,20 @@
       setTimeout(() => confetti.remove(), 5500);
     });
 
+    document.getElementById('extraBtn').addEventListener('click', () => {
+      extraReveal.classList.add('hidden');
+      show(extra);
+    });
+
+    document.getElementById('showMoreBtn').addEventListener('click', () => {
+      extraReveal.classList.remove('hidden');
+    });
+
     document.getElementById('replayBtn').addEventListener('click', () => {
       noAttempts = 0;
       noBtn.removeAttribute('style');
       tease.textContent = '';
+      extraReveal.classList.add('hidden');
       show(welcome);
     });
   </script>
