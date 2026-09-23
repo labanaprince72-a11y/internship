@@ -223,6 +223,14 @@
           <p class="lede">I saved one more little feeling here just for you.</p>
           <div class="button-row"><button class="primary" id="showMoreBtn">Yes, show me ♥</button></div>
           <p id="extraReveal" class="extra-reveal hidden">The something else is… I love you more than yesterday, and less than tomorrow.</p>
+          <div id="extraVideoWrap" class="hidden">
+            <figure class="story-card after-video">
+              <video controls playsinline preload="metadata" poster="anniversary-memory-6.jpg">
+                <source src="our-story-after-yes.mp4" type="video/mp4" />
+              </video>
+              <figcaption>A little more of us, just for you ♥</figcaption>
+            </figure>
+          </div>
           <div class="button-row"><button class="ghost" id="replayBtn">Replay our little story ↺</button></div>
         </div>
       </section>
@@ -236,6 +244,7 @@
     const success = document.getElementById('success');
     const extra = document.getElementById('extra');
     const extraReveal = document.getElementById('extraReveal');
+    const extraVideoWrap = document.getElementById('extraVideoWrap');
     const nameDisplay = document.getElementById('nameDisplay');
     const successName = document.getElementById('successName');
     const noteDisplay = document.getElementById('noteDisplay');
@@ -299,11 +308,13 @@
 
     document.getElementById('extraBtn').addEventListener('click', () => {
       extraReveal.classList.add('hidden');
+      extraVideoWrap.classList.add('hidden');
       show(extra);
     });
 
     document.getElementById('showMoreBtn').addEventListener('click', () => {
       extraReveal.classList.remove('hidden');
+      extraVideoWrap.classList.remove('hidden');
     });
 
     document.getElementById('replayBtn').addEventListener('click', () => {
@@ -311,6 +322,7 @@
       noBtn.removeAttribute('style');
       tease.textContent = '';
       extraReveal.classList.add('hidden');
+      extraVideoWrap.classList.add('hidden');
       show(welcome);
     });
   </script>
