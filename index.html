@@ -129,6 +129,8 @@
     .music-card h4 { margin: 7px 0 4px; color: var(--ink); font-size: 20px; font-weight: 500; }
     .music-card p { margin: 0 0 12px; color: var(--muted); font-size: 13px; }
     .music-card iframe { width: 100%; height: 86px; display: block; border: 0; border-radius: 12px; }
+    .after-video { width: min(100%, 520px); margin: 24px auto 4px; }
+    .after-video video { width: 100%; aspect-ratio: 16 / 10; display: block; object-fit: cover; background: #301522; border-radius: 16px; }
     footer { margin-top: 18px; text-align: center; color: rgba(139,82,103,.75); font-size: 12px; }
     @media (max-width: 560px) {
       .story-grid { grid-template-columns: 1fr; gap: 10px; }
@@ -202,6 +204,12 @@
         <h2><span class="script">I knew it!</span></h2>
         <p class="promise">Then it’s you and me—more ordinary mornings, spontaneous adventures, ridiculous inside jokes, and a lifetime of choosing each other.</p>
         <p class="signature">Happy first anniversary, <span id="successName">Kusum</span>.<br />Here’s to every anniversary still to come.<br /><span style="font-size:16px">With all my love, Prince.</span></p>
+        <figure class="story-card after-video">
+          <video controls playsinline preload="metadata" poster="anniversary-memory-6.jpg">
+            <source src="our-story-after-yes.mp4" type="video/mp4" />
+          </video>
+          <figcaption>And this little video is waiting for you after your yes ♥</figcaption>
+        </figure>
         <div class="button-row"><button class="ghost" id="replayBtn">Replay our little story ↺</button></div>
       </section>
     </main>
