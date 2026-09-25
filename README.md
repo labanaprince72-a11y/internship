@@ -16,6 +16,15 @@ A small, transparent analysis of active Berlin student and intern roles related 
 - [Open the project](portfolio/berlin-working-student-analysis/README.md)
 - [Open the visual report](portfolio/berlin-working-student-analysis/job_market_report.html)
 
+### FlyRank ML Capstone — Refresh / Content Opportunity Scoring
+A public research paper and reproducible capstone that compares a transparent baseline with grouped client-holdout models, checks leakage, and produces a human-reviewed content action queue.
+
+- Result: grouped Precision@50 of 0.62 for the selected logistic model versus 0.44 for the transparent baseline
+- Scope: 30,000-row anonymized starter release; decision-support only, not causal proof or autonomous publishing
+- [Read the deployed paper](https://labanaprince72-a11y.github.io/internship/capstone.html)
+- [Open the capstone notebook](work/notebooks/capstone.ipynb)
+- [Read the capstone report](work/capstone_report.md)
+
 ### FlyRank ML-02 — Research Question and Provisional Lane
 A research-framing notebook for Refresh / Content Opportunity Scoring using an anonymized content dataset.
 
