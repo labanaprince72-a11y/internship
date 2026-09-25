@@ -1,0 +1,36 @@
+{
+  "rows_ranked": 30000,
+  "retrospective_decline_base_rate": 0.5420666666666667,
+  "precision_at_10_decline_audit_only": 0.8,
+  "precision_at_50_decline_audit_only": 0.44,
+  "precision_at_100_decline_audit_only": 0.35,
+  "score_distribution": {
+    "0": 9137,
+    "1": 4239,
+    "2": 2434,
+    "3": 5702,
+    "4": 6306,
+    "5": 2178,
+    "6": 4
+  },
+  "reason_code_counts": {
+    "visible_page1_2_low_ctr": 12597,
+    "low_visibility": 11248,
+    "visible_only": 5556,
+    "visible_page1_2": 577,
+    "stale_visible_low_ctr": 12,
+    "stale_visible": 10
+  },
+  "score_inputs": [
+    "impressions_90d",
+    "avg_position",
+    "ctr",
+    "days_since_last_update"
+  ],
+  "forbidden_inputs_excluded": [
+    "is_declining_label",
+    "observed_decline_outcome",
+    "trend_direction",
+    "trend_pct"
+  ]
+}
