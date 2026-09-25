@@ -1,0 +1,107 @@
+{
+  "rows": 30000,
+  "lane": "Refresh / Content Opportunity Scoring",
+  "target": "observed_decline_outcome",
+  "base_rate": 0.5420666666666667,
+  "features": [
+    "impressions_prev_30d",
+    "clicks_prev_30d",
+    "sessions_prev_30d",
+    "content_age_days",
+    "days_since_last_update",
+    "search_volume",
+    "competition",
+    "word_count",
+    "char_count"
+  ],
+  "forbidden_inputs_excluded": [
+    "is_declining_label",
+    "observed_decline_outcome",
+    "trend_direction",
+    "trend_pct"
+  ],
+  "random_split": [
+    {
+      "split": "random",
+      "method": "week4_transparent_baseline",
+      "precision_at_10": 0.7,
+      "precision_at_50": 0.52,
+      "precision_at_100": 0.54,
+      "roc_auc": 0.5788995418338463,
+      "accuracy_at_0.5": null
+    },
+    {
+      "split": "random",
+      "method": "logistic_regression",
+      "precision_at_10": 0.5,
+      "precision_at_50": 0.68,
+      "precision_at_100": 0.73,
+      "roc_auc": 0.6422209689345801,
+      "accuracy_at_0.5": 0.6226666666666667
+    },
+    {
+      "split": "random",
+      "method": "random_forest",
+      "precision_at_10": 0.9,
+      "precision_at_50": 0.9,
+      "precision_at_100": 0.92,
+      "roc_auc": 0.7739634505515363,
+      "accuracy_at_0.5": 0.7021333333333334
+    }
+  ],
+  "grouped_client_holdout": [
+    {
+      "split": "grouped_client_holdout",
+      "method": "week4_transparent_baseline",
+      "precision_at_10": 0.6,
+      "precision_at_50": 0.44,
+      "precision_at_100": 0.43,
+      "roc_auc": 0.5000124189210569,
+      "accuracy_at_0.5": null
+    },
+    {
+      "split": "grouped_client_holdout",
+      "method": "logistic_regression",
+      "precision_at_10": 0.4,
+      "precision_at_50": 0.62,
+      "precision_at_100": 0.61,
+      "roc_auc": 0.534718517639614,
+      "accuracy_at_0.5": 0.5318341531974702
+    },
+    {
+      "split": "grouped_client_holdout",
+      "method": "random_forest",
+      "precision_at_10": 0.6,
+      "precision_at_50": 0.42,
+      "precision_at_100": 0.49,
+      "roc_auc": 0.6522387676000633,
+      "accuracy_at_0.5": 0.6109627547434997
+    }
+  ],
+  "grouped_train_clients": 24,
+  "grouped_test_clients": 8,
+  "client_overlap": 0,
+  "selected_model": "logistic_regression",
+  "intentional_target_copy_canary_roc_auc": 1.0,
+  "queue_rows": 30000,
+  "queue_priority_counts": {
+    "P1_review_this_week": 2182,
+    "P2_review_next_cycle": 12008,
+    "P3_monitor_or_sample": 6673,
+    "P4_hold_without_new_evidence": 9137
+  },
+  "queue_action_counts": {
+    "improve_snippet_or_intent": 12597,
+    "monitor": 11248,
+    "monitor_or_research": 5556,
+    "review_search_fit": 577,
+    "refresh_and_recheck": 22
+  },
+  "p1_click_value_proxy_total": 35072.03999999999,
+  "all_rows_require_human_review": true,
+  "figures": [
+    "work/figures/capstone_model_vs_baseline.png",
+    "work/figures/capstone_priority_tiers.png",
+    "work/figures/capstone_visibility_signal.png"
+  ]
+}
